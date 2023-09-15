@@ -1,6 +1,7 @@
-# Phoenix HRMS
+# HRMS
 
-Web based Human Resource Management System
+Webベースの人事管理システム
+
 
 ![build](https://github.com/mjp91/phoenix/workflows/Java%20CI%20with%20Maven/badge.svg)
 ![Node.js CI](https://github.com/mjp91/phoenix/workflows/Node.js%20CI/badge.svg)
@@ -15,9 +16,9 @@ Web based Human Resource Management System
 
 ## Overview
 
-Phoenix is a web application to support common human resource requirements.  
-The application tier uses Spring Boot including Spring Web MVC, Security and Data JPA.  
-The front-end uses VueJS.
+Phoenixは一般的な人材要件をサポートするためのWebアプリケーションです。
+アプリケーション層では、Spring Bootを使用しており、Spring Web MVC、Security、Data JPAを含んでいます。
+フロントエンドはVueJSを使用しています。
 
 ## Screenshots
 
@@ -35,38 +36,36 @@ The front-end uses VueJS.
 
 ## Features
 
-The following is a list of the main features.
-
+以下は、主な特徴のリストです。
 ### Employee Database
 
-Record employee details, including a photograph, job role, manager, department, address and holiday entitlement.  
-Quick search displaying contact details including email address and telephone.
+従業員の詳細を記録し、写真、職務、マネージャー、部署、住所、休暇の権利を含めます。
+電子メールアドレスと電話番号を含む連絡先のクイック検索を表示します。
 
-### Holiday Booking
+### 休暇予約
 
-Employees can request holiday up to their entitlement, requests can be approved or declined by managers.
+従業員は自分の権限に基づいて休暇を申請することができ、管理者によって承認または拒否されることがあります。
 
-### Calendar Feeds
+### カレンダーフィード
 
-Each user has their own personal iCal URL to import holiday into mail clients such as Outlook.
+各ユーザーは自分専用のiCal URLを持っており、Outlookなどのメールクライアントに休暇をインポートすることができます。
 
-### Absence Reporting
+### 欠勤報告
 
-Employees can report absence, absences can be authorized/unauthorized by managers.
+従業員は欠勤を報告することができ、管理者によって承認または非承認されることがあります。
 
-### LDAP and Two-Factor Authentication
+### LDAPと2要素認証
 
-Optional LDAP login is supported as well as 2FA using TOTP codes.
+オプションのLDAPログインとTOTPコードを使用した2要素認証がサポートされています。
 
-### Multi-tenancy
+### マルチテナンシー
 
-Support for multiple clients served by one instance of the application.
+アプリケーションの1つのインスタンスで複数のクライアントをサポートします。
 
-## Installation
+## インストール
 
-The easiest way to deploy the application is with Docker Compose.  
-There is a sample `docker-compose.yml` file included in the project which is configured to build and deploy the
-application.
+アプリケーションを展開する最も簡単な方法はDocker Composeを使用することです。
+プロジェクトにはサンプルの `docker-compose.yml` ファイルが含まれており、アプリケーションのビルドと展開が設定されています。
 
 ```shell
 git clone https://github.com/mjp91/phoenix.git
@@ -77,8 +76,8 @@ docker-compose up -d
 
 ### Production
 
-The default passwords included in the `docker-compose.yml` file should be changed.  
-The NGINX proxy container should be configured to use TLS.
+`docker-compose.yml`ファイルに含まれるデフォルトのパスワードは変更する必要があります。  
+NGINXプロキシコンテナをTLSを使用するように設定する必要があります。
 
 ### Configuration
 
@@ -103,10 +102,9 @@ Name | Description
 
 ## Contributing
 
-Contribution is welcome.
+このリポジトリに貢献することは歓迎されています。
 
-When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other
-method with the owners of this repository before making a change.
+このリポジトリに貢献する場合は、変更内容を最初に問題、メール、またはその他の方法でこのリポジトリのオーナーと議論してから変更を行ってください。
 
 ### Build
 
@@ -118,8 +116,7 @@ method with the owners of this repository before making a change.
 
 #### Back-end
 
-From the root of the project; using a local installation of Maven or the included wrapper:
-
+プロジェクトのルートから、ローカルにインストールされたMavenまたは含まれるラッパーを使用してください。
 ```shell
 # compile
 ./mvnw clean package -DskipTests
